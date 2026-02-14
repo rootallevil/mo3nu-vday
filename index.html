@@ -110,6 +110,7 @@
       function yesClick() {
         const modal = document.querySelector(".modal");
         modal.style.display = "flex";
+        modal.style.animation = "scaleUp 3s ease-in forwards";
 
         const closeBtn = document.querySelector(".modal-header i");
         closeBtn.addEventListener("click", () => {
