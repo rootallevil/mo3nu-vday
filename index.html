@@ -1,8 +1,12 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
     <link rel="stylesheet" href="./style.css" />
     <title>Happy Valentine's Day</title>
   </head>
@@ -74,7 +78,18 @@
 
     <div class="footer">
       <h2>Choose again?</h2>
-      <button onclick="window.scrollTo(0,0)">Back to square "Yes!"</button>
+      <button onclick="window.scrollTo(0, 0)">Back to square "Yes!"</button>
+    </div>
+
+    <div class="modal">
+      <div class="modal-header">
+        <i class="fa fa-close"></i>
+      </div>
+      <div class="modal-content">
+        <img src="./pics/monu.png" alt="Happy Monu" />
+        <h2>Yay!!</h2>
+        <p>Lubbutu &#128536;</p>
+      </div>
     </div>
 
     <script>
@@ -93,7 +108,13 @@
       }
 
       function yesClick() {
-        // alert("Yay!");
+        const modal = document.querySelector(".modal");
+        modal.style.display = "flex";
+
+        const closeBtn = document.querySelector(".modal-header i");
+        closeBtn.addEventListener("click", () => {
+          modal.style.display = "none";
+        });
       }
     </script>
   </body>
