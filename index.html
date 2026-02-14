@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>Happy Valentine's Day</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="overlay">
+        <h1>Will you be my Valentine? &#128536;</h1>
+        <div class="button-group">
+          <button id="yesBtn" onclick="yesClick()">Yes!</button>
+          <button id="noBtn">No..</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="pics-container">
+      <div class="pics-overlay">
+        <h2>You know what lies ahead...</h2>
+        <div class="pics-group">
+          <h3>Hehehehe</h3>
+          <div class="pics-row">
+            <img src="./pics/funny-1.jpg" alt="Momo is funny" />
+            <img src="./pics/funny-2.jpg" alt="Momo is funny" />
+            <img src="./pics/funny-3.jpg" alt="Momo is funny" />
+          </div>
+        </div>
+        <div class="pics-group">
+          <h3>Bhukkad Momo</h3>
+          <div class="pics-row">
+            <img src="./pics/food-1.jpg" alt="Momo is hungry" />
+            <img src="./pics/food-2.jpg" alt="Momo is hungry" />
+          </div>
+        </div>
+        <div class="pics-group">
+          <h3>My moon capturing moon</h3>
+          <div class="pics-row">
+            <img src="./pics/click-1.jpg" alt="Momo is my moon" />
+            <img src="./pics/click-2.jpg" alt="Momo is my moon" />
+          </div>
+        </div>
+        <div class="pics-group">
+          <h3>AI taking over...</h3>
+          <div class="pics-row">
+            <img src="./pics/ai-1.png" alt="Momo in AI" />
+            <img src="./pics/ai-2.jpg" alt="Momo in AI" />
+            <img src="./pics/ai-3.jpg" alt="Momo in AI" />
+          </div>
+        </div>
+        <div class="pics-group">
+          <h3>And finally, my Valentine</h3>
+          <div class="pics-row">
+            <img src="./pics/she-1.jpg" alt="Momo" />
+            <img src="./pics/she-2.jpg" alt="Momo" />
+            <img src="./pics/she-3.jpg" alt="Momo" />
+            <img src="./pics/she-4.jpg" alt="Momo" />
+            <img src="./pics/she-5.jpg" alt="Momo" />
+            <img src="./pics/she-6.jpg" alt="Momo" />
+          </div>
+        </div>
+        <div class="pics-group">
+          <h3>Making me whole</h3>
+          <div class="pics-row">
+            <img src="./pics/us-1.jpg" alt="Mo3nu" />
+            <img src="./pics/us-2.jpg" alt="Mo3nu" />
+            <img src="./pics/us-3.jpg" alt="Mo3nu" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <h2>Choose again?</h2>
+      <button onclick="window.scrollTo(0,0)">Back to square "Yes!"</button>
+    </div>
+
+    <script>
+      const btn = document.getElementById("noBtn");
+      btn.tabIndex = -1;
+
+      btn.addEventListener("mouseenter", moveAway);
+      btn.addEventListener("click", moveAway);
+
+      function moveAway() {
+        const x = (Math.random() * (window.innerWidth - btn.offsetWidth)) / 3;
+        const y = (Math.random() * (window.innerHeight - btn.offsetHeight)) / 2;
+
+        btn.style.left = `${x}px`;
+        btn.style.top = `${y}px`;
+      }
+
+      function yesClick() {
+        // alert("Yay!");
+      }
+    </script>
+  </body>
+</html>

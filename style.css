@@ -1,0 +1,222 @@
+@font-face {
+  font-family: Sofia;
+  src: url("./fonts/Sofia/Sofia-Regular.ttf");
+}
+
+@font-face {
+  font-family: DancingScript;
+  src: url("./fonts/Dancing_Script/static/DancingScript-Regular.ttf");
+}
+
+@keyframes pulsate-yes {
+  0% {
+    transform: scale(1);
+  }
+  40% {
+    transform: scale(1.1);
+  }
+  60% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: DancingScript;
+}
+
+body,
+html {
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.container {
+  display: flex;
+  height: 70vh;
+  width: 100vw;
+  background: url("./pics/us-4.jpg") center/cover fixed;
+}
+
+.overlay {
+  height: 100%;
+  width: 100%;
+  background: rgba(255, 192, 203, 0.7);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay h1 {
+  font-family: Sofia;
+  font-size: 48px;
+  margin-bottom: 50px;
+  line-height: 1.3;
+  text-align: center;
+  color: #800020;
+  text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}
+
+.button-group {
+  position: relative;
+  display: flex;
+}
+
+.button-group button {
+  cursor: pointer;
+  height: 60px;
+  width: 150px;
+  font-size: 28px;
+  border: none;
+  border-radius: 5px;
+  background-color: #dc143c;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.3);
+  transition: 0.1s;
+}
+
+.button-group #yesBtn:hover {
+  background-color: #800020;
+  color: white;
+}
+
+#yesBtn {
+  position: absolute;
+  top: 0;
+  left: -170px;
+  transition: all 0.2s ease-out;
+}
+
+#yesBtn:hover {
+  font-size: 32px;
+  animation: pulsate-yes 0.5s infinite;
+}
+
+#noBtn {
+  position: absolute;
+  top: 0;
+  left: 20px;
+  transition: all 0.2s ease-out;
+}
+
+.pics-container {
+  background: url("./pics/bg.jpg") right/cover;
+}
+
+.pics-overlay {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10vh 0;
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.pics-container h2 {
+  font-family: Sofia;
+  font-size: 36px;
+  line-height: 1.3;
+  color: #800020;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.pics-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 5%;
+  margin-bottom: 2vh;
+}
+
+.pics-group h3 {
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.pics-row {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+}
+
+.pics-row img {
+  width: 200px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 3px;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+  height: 60px;
+  background: #ffb6c1;
+}
+
+.footer h2 {
+  color: #800020;
+  margin-left: 30px;
+}
+
+.footer button {
+  height: 100%;
+  width: 220px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: #800020;
+  color: white;
+}
+
+@media (max-width: 540px) {
+  .container h1 {
+    font-size: 40px;
+  }
+
+  .button-group button {
+    height: 50px;
+    width: 120px;
+    font-size: 22px;
+  }
+
+  #yesBtn {
+    left: -130px;
+  }
+
+  #yesBtn:hover {
+    font-size: 25px;
+  }
+
+  #noBtn {
+    left: 10px;
+  }
+
+  .pics-overlay {
+    padding: 5vh 0;
+  }
+
+  .pics-container h2 {
+    font-size: 32px;
+  }
+
+  .pics-row {
+    justify-content: space-evenly;
+  }
+
+  .pics-row img {
+    width: 180px;
+    height: 300px;
+  }
+}
